@@ -3,15 +3,12 @@
 #include <pybind11/pybind11.h>
 
 #include "ops/acos.hpp"
-#include "ops/adaptive_avg_pool1d.hpp"
 #include "ops/adaptive_avg_pool3d.hpp"
 #include "ops/adaptive_max_pool1d.hpp"
 #include "ops/add.hpp"
 #include "ops/add_rms_norm.hpp"
-#include "ops/addbmm.hpp"
 #include "ops/addcmul.hpp"
 #include "ops/addr.hpp"
-#include "ops/affine_grid.hpp"
 #include "ops/all.hpp"
 #include "ops/argwhere.hpp"
 #include "ops/asin.hpp"
@@ -23,7 +20,6 @@
 #include "ops/axpy.hpp"
 #include "ops/baddbmm.hpp"
 #include "ops/bilinear.hpp"
-#include "ops/binary_cross_entropy_with_logits.hpp"
 #include "ops/bitwise_right_shift.hpp"
 #include "ops/blas_amax.hpp"
 #include "ops/blas_amin.hpp"
@@ -33,7 +29,6 @@
 #include "ops/broadcast_to.hpp"
 #include "ops/cat.hpp"
 #include "ops/causal_softmax.hpp"
-#include "ops/cdist.hpp"
 #include "ops/cross_entropy.hpp"
 #include "ops/diff.hpp"
 #include "ops/digamma.hpp"
@@ -43,7 +38,6 @@
 #include "ops/flash_attention.hpp"
 #include "ops/flipud.hpp"
 #include "ops/float_power.hpp"
-#include "ops/floor.hpp"
 #include "ops/floor_divide.hpp"
 #include "ops/fmin.hpp"
 #include "ops/fmod.hpp"
@@ -103,13 +97,11 @@
 #include "ops/smooth_l1_loss.hpp"
 #include "ops/softplus.hpp"
 #include "ops/softsign.hpp"
-#include "ops/sum.hpp"
 #include "ops/swap.hpp"
 #include "ops/swiglu.hpp"
 #include "ops/take.hpp"
 #include "ops/tan.hpp"
 #include "ops/tanhshrink.hpp"
-#include "ops/topk.hpp"
 #include "ops/topksoftmax.hpp"
 #include "ops/triplet_margin_loss.hpp"
 #include "ops/triplet_margin_with_distance_loss.hpp"
@@ -117,7 +109,6 @@
 #include "ops/upsample_bilinear.hpp"
 #include "ops/upsample_nearest.hpp"
 #include "ops/vander.hpp"
-#include "ops/var.hpp"
 #include "ops/var_mean.hpp"
 
 namespace py = pybind11;
@@ -133,11 +124,7 @@ inline void bind(py::module &m) {
     bind_asin(m);
     bind_add_rms_norm(m);
     bind_add(m);
-    bind_addbmm(m);
     bind_acos(m);
-    bind_affine_grid(m);
-    bind_floor(m);
-    bind_adaptive_avg_pool1d(m);
     bind_attention(m);
     bind_asinh(m);
     bind_asum(m);
@@ -225,16 +212,11 @@ inline void bind(py::module &m) {
     bind_embedding(m);
     bind_linear_w8a8i8(m);
     bind_silu_and_mul(m);
-    bind_sum(m);
     bind_var_mean(m);
-    bind_var(m);
-    bind_topk(m);
     bind_all(m);
     bind_equal(m);
     bind_atanh(m);
     bind_addcmul(m);
-    bind_cdist(m);
-    bind_binary_cross_entropy_with_logits(m);
     bind_reciprocal(m);
     bind_upsample_bilinear(m);
     bind_kthvalue(m);

@@ -51,7 +51,6 @@ from infinicore.dtype import (
 from infinicore.ops.acos import acos
 from infinicore.ops.add import add
 from infinicore.ops.add_rms_norm import add_rms_norm
-from infinicore.ops.addbmm import addbmm
 from infinicore.ops.addcmul import addcmul
 from infinicore.ops.addr import addr
 from infinicore.ops.all import all
@@ -64,9 +63,6 @@ from infinicore.ops.attention import attention
 from infinicore.ops.axpy import axpy
 from infinicore.ops.baddbmm import baddbmm
 from infinicore.ops.bilinear import bilinear
-from infinicore.ops.binary_cross_entropy_with_logits import (
-    binary_cross_entropy_with_logits,
-)
 from infinicore.ops.bitwise_right_shift import bitwise_right_shift
 from infinicore.ops.blas_amax import blas_amax
 from infinicore.ops.blas_amin import blas_amin
@@ -75,7 +71,6 @@ from infinicore.ops.blas_dot import blas_dot
 from infinicore.ops.block_diag import block_diag
 from infinicore.ops.broadcast_to import broadcast_to
 from infinicore.ops.cat import cat
-from infinicore.ops.cdist import cdist
 from infinicore.ops.cross_entropy import cross_entropy
 from infinicore.ops.diff import diff
 from infinicore.ops.digamma import digamma
@@ -83,7 +78,6 @@ from infinicore.ops.dist import dist
 from infinicore.ops.equal import equal
 from infinicore.ops.flipud import flipud
 from infinicore.ops.float_power import float_power
-from infinicore.ops.floor import floor
 from infinicore.ops.floor_divide import floor_divide
 from infinicore.ops.fmin import fmin
 from infinicore.ops.fmod import fmod
@@ -122,14 +116,11 @@ from infinicore.ops.scal import scal
 from infinicore.ops.scatter import scatter
 from infinicore.ops.sinh import sinh
 from infinicore.ops.squeeze import squeeze
-from infinicore.ops.sum import sum
 from infinicore.ops.swap import swap
 from infinicore.ops.take import take
 from infinicore.ops.tan import tan
-from infinicore.ops.topk import topk
 from infinicore.ops.unsqueeze import unsqueeze
 from infinicore.ops.vander import vander
-from infinicore.ops.var import var
 from infinicore.ops.var_mean import var_mean
 from infinicore.tensor import (
     Tensor,
@@ -190,8 +181,6 @@ __all__ = [
     # Operations.
     "addcmul",
     "atanh",
-    "binary_cross_entropy_with_logits",
-    "cdist",
     "reciprocal",
     "add",
     "addr",
@@ -205,8 +194,6 @@ __all__ = [
     "blas_copy",
     "blas_dot",
     "acos",
-    "addbmm",
-    "floor",
     "attention",
     "block_diag",
     "kron",
@@ -274,10 +261,7 @@ __all__ = [
     "strided_empty",
     "strided_from_blob",
     "zeros",
-    "sum",
     "var_mean",
-    "var",
-    "topk",
     "all",
     "set_printoptions",
     "printoptions",
